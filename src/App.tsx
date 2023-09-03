@@ -6,20 +6,15 @@ import './App.css'
 import Counter from './components/Counter';
 import StyleChanger from './components/StyleChanger/StyleChanger';
 import Users from './components/Users/Users';
+import UsersFromServer from './components/UsersFromServer/UsersFromServer';
 
 function App() {
 
   return (
     <>
       <Counter/>
-      <StyleChanger/>
-      <Users data={[
-        {
-          id: 'ergrgr',
-          name: 'fbfdbg',
-          email: 'fbfdbg',
-      }
-        ]}/>
+
+        <UsersFromServer/>
     </>
   )
 }

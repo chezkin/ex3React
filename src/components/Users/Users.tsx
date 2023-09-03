@@ -17,19 +17,6 @@ const Users = (props: Props) => {
     const newUserEmail = useRef(null)
 
 
-    const addUserDiv = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const user = {...newUser.current , id : uuidv4()}
-        return (
-            <div className="user">
-                <h3>{user.name}</h3>
-                <h4>{user.email}</h4>
-                <p>{user.id}</p>
-            </div>
-        )
-
-
-    }
   return (
     <>
     { props.data.map((user : User) =>{
@@ -41,11 +28,7 @@ const Users = (props: Props) => {
             </div>
         )
     })}
-    <form onSubmit={addUserDiv}>
-        <input ref={newUserName} type="text" name="name" id="name" placeholder='Enter your name' />
-        <input ref={(e) => {newUserEmail.current = e.targat.value} } type="email" name="email" id="email" placeholder='Enter your email'/>
-        <button onClick={addUserDiv} type="submit">add user</button>
-    </form>
+
     </>
     
     

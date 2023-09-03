@@ -1,0 +1,7 @@
+.crardUser{
+    padding: 3px;
+    border: 2px solid red;
+    border-radius: 12px;
+    margin: 5px;
+    min-width: 300px;
+}
